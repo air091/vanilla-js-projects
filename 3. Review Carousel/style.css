@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 52rem;
+    text-align: center;
+    display: grid;
+    row-gap: 6rem;
+}
+
+header {
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 6rem;
+}
+
+header .underline {
+    width: 10rem;
+    border-bottom: 0.4rem solid hsl(207, 100%, 50%);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 12rem;
+    height: 12rem;
+}
+
+.img-wrapper .svg-wrapper {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.6rem;
+    border-radius: 50%;
+    background-color: hsl(207, 100%, 50%);
+}
+
+.img-wrapper .svg-wrapper svg {
+    color: white;
+    transform: scale(0.7);
+}
+
+.img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0.5rem -0.4rem 0rem hsl(207, 100%, 50%);
+}
+
+article {
+    display: grid;
+    row-gap: 1.6rem;
+    place-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.3);
+}
+
+.person-info {
+    display: grid;
+    row-gap: 0.4rem;
+}
+
+span {
+    display: block;
+}
+
+span#name {
+    font-weight: 700;
+    font-weight: 1.4rem;
+}
+
+span#job {
+    color: hsl(207, 100%, 50%);
+    font-size: 1.4rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-container button svg {
+    transform: scale(1.6);
+    margin-inline: 0.6rem;
+}
+
+button.surprise {
+    border: 2px solid hsl(207, 100%, 50%);
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+    color: hsl(207, 100%, 50%);
+    font-weight: 700;
+    transition: background-color 0.2s ease-in;
+}
+
+button.surprise:hover {
+    background: hsla(207, 100%, 50%, 0.1);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Carpousel</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app-container">
+        <header>
+          <h2>Our Reviews</h2>
+          <div class="underline"></div>
+        </header>
+        <article>
+          <div class="img-wrapper">
+            <div class="svg-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: white"
+              >
+                <path
+                  d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"
+                ></path>
+              </svg>
+            </div>
+
+            <img id="person-image" src="" alt="" />
+          </div>
+
+          <div class="person-info">
+            <span id="person-name"></span>
+            <span id="person-job"></span>
+          </div>
+          <p class="person-paragraph"></p>
+          <div class="button-container">
+            <button class="previous">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: hsl(207, 100%, 50%)"
+              >
+                <path
+                  d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+                ></path>
+              </svg>
+            </button>
+            <button class="next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: hsl(207, 100%, 50%)"
+              >
+                <path
+                  d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <button class="surprise">Surprise Me</button>
+        </article>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
