@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: hsl(0, 0%, 90%);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: white;
+}
+
+header i.bx-menu {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+header i.bx-menu:hover {
+    color: blue;
+}
+
+ul {
+    display: flex;
+    column-gap: 2rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color .3s ease;
+}
+
+ul li a:hover {
+    color: blue;
+}
+
+@media screen and (min-width: 768px) {
+    #links {
+        display: flex;
+        max-height: none;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header i.bx-menu {
+        display: block;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #links {
+        display: block;
+        max-height: 0;
+        /* Hide the links with a max-height of 0 */
+        opacity: 0;
+        overflow: hidden;
+        /* Ensure the content is hidden while animating */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    #links.active {
+        max-height: 500px;
+        /* Set a high enough max-height to accommodate the content */
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin-top: 1rem;
+        text-align: end;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding-block: 1rem;
+        padding-right: 4rem;
+        border-radius: 0.6rem;
+    }
+
+    nav ul li a:hover {
+        background-color: hsl(0, 0%, 90%);
+    }
+
+}
