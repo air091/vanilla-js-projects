@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: hsl(0, 0%, 90%);
+    height: 100vh;
+}
+
+/* NAV */
+#container {
+    padding-top: 7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+    border-radius: 0 1.6rem 1.6rem 0;
+    max-width: 28rem;
+    /* Keep the max width for animation */
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(-100%);
+    /* Start hidden (off-screen) */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* z-index: -1; */
+}
+
+#container.active {
+    transform: translateX(0%);
+    /* Moves sidebar into view */
+    opacity: 1;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    column-gap: 2rem;
+}
+
+header i.bx-menu,
+header h1 {
+    z-index: 1;
+}
+
+header i.bx-menu {
+    font-size: 3rem;
+    cursor: pointer;
+    padding-inline: 1rem;
+    transition: color 0.3s ease;
+}
+
+header i.bx-menu:hover {
+    color: cadetblue;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* UL */
+ul {
+    display: grid;
+    row-gap: 1rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 7rem;
+    padding-block: 1rem;
+    font-size: 2rem;
+    border-radius: 0.6rem;
+}
+
+ul li a:hover {
+    background-color: cadetblue;
+}
