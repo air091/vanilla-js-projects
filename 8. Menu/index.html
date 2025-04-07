@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Menu</title>
+  </head>
+  <body>
+    <div class="menu-container">
+      <header>
+        <h1>Our Menu</h1>
+        <div class="underline"></div>
+      </header>
+      <nav>
+        <ul class="btn-container">
+          <li>
+            <button class="filter-btn" type="button" onclick="getAll()">
+              All
+            </button>
+          </li>
+          <li>
+            <button
+              id="breakfast"
+              class="filter-btn"
+              type="button"
+              onclick="getBreakfast()"
+            >
+              Breakfast
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" type="button" onclick="getLunch()">
+              Lunch
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" type="button" onclick="getShakes()">
+              Shakes
+            </button>
+          </li>
+          <li>
+            <button class="filter-btn" type="button" onclick="getDinner()">
+              Dinner
+            </button>
+          </li>
+        </ul>
+
+        <ul class="menu-list-container">
+          <li>
+            <article class="menu-item" data-id="breakfast">
+              <img
+                src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-1.jpeg"
+                alt="buttermilk pancakes"
+              />
+              <div class="item-info">
+                <header>
+                  <h4>buttermilk pancakes</h4>
+                  <h4 class="price">$15.99</h4>
+                </header>
+                <p class="item-text">
+                  I'm baby woke mlkshk wolf bitters live-edge blue bottle,
+                  hammock freegan copper mug whatever cold-pressed.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="lunch">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-2.jpeg"
+                  alt="diner double"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>diner double</h4>
+                  <h4>$13.99</h4>
+                </header>
+                <p class="item-text">
+                  vaporware iPhone mumblecore selvage raw denim slow-carb
+                  leggings gochujang helvetica man braid jianbing. Marfa
+                  thundercats.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="shakes">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-3.jpeg"
+                  alt="godzilla milkshake"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>godzilla milkshake</h4>
+                  <h4>$6.99</h4>
+                </header>
+                <p class="item-text">
+                  ombucha chillwave fanny pack 3 wolf moon street art photo
+                  booth before they sold out organic viral.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="breakfast">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-4.jpeg"
+                  alt="country delight"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>country delight</h4>
+                  <h4>$20.99</h4>
+                </header>
+                <p class="item-text">
+                  Shabby chic keffiyeh neutra snackwave pork belly shoreditch.
+                  Prism austin mlkshk truffaut.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="lunch">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-5.jpeg"
+                  alt="egg attack"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>egg attack</h4>
+                  <h4>$22.99</h4>
+                </header>
+                <p class="item-text">
+                  franzen vegan pabst bicycle rights kickstarter pinterest
+                  meditation farm-to-table 90's pop-up.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="shakes">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-6.jpeg"
+                  alt="oreo dream"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>oreo dream</h4>
+                  <h4>$18.99</h4>
+                </header>
+                <p class="item-text">
+                  Portland chicharrones ethical edison bulb, palo santo craft
+                  beer chia heirloom iPhone everyday.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="breakfast">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-7.jpeg"
+                  alt="bacon overflow"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>bacon overflow</h4>
+                  <h4>$8.99</h4>
+                </header>
+                <p class="item-text">
+                  carry jianbing normcore freegan. Viral single-origin coffee
+                  live-edge, pork belly cloud bread iceland put a bird.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="lunch">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-8.jpeg"
+                  alt="american classic"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>american classic</h4>
+                  <h4>$12.99</h4>
+                </header>
+                <p class="item-text">
+                  on it tumblr kickstarter thundercats migas everyday carry
+                  squid palo santo leggings. Food truck truffaut.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="shakes">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-9.jpeg"
+                  alt="quarantine buddy"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>quarantine buddy</h4>
+                  <h4>$16.99</h4>
+                </header>
+                <p class="item-text">
+                  skateboard fam synth authentic semiotics. Live-edge lyft af,
+                  edison bulb yuccie crucifix microdosing.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="menu-item" data-id="dinner">
+              <div class="img-wrapper">
+                <img
+                  src="https://vanilla-js-basic-project-8-menu.netlify.app/images/item-10.jpeg"
+                  alt="steak dinner"
+                />
+              </div>
+              <div class="item-info">
+                <header>
+                  <h4>steak dinner</h4>
+                  <h4>$39.99</h4>
+                </header>
+                <p class="item-text">
+                  skateboard fam synth authentic semiotics. Live-edge lyft af,
+                  edison bulb yuccie crucifix microdosing.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
