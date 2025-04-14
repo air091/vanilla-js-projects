@@ -81,6 +81,7 @@ img {
     font-weight: lighter;
     background-color: hsl(200, 20%, 85%);
     cursor: pointer;
+    transition: all 0.3s ease-in;
 }
 
 .tab-btn:first-child {
